@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/mesh_skeleton_extraction.dir/app/mesh_skeleton_extraction.cpp.o -o mesh_skeleton_extraction  -lyaml-cpp lib/libpolyscope.a -lpython3.11 lib/libglfw3.a -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl -lX11 lib/libglad.a lib/libimgui.a lib/libstb.a 

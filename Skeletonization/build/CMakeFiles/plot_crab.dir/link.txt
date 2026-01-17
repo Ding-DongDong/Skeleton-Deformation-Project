@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/plot_crab.dir/app/plot_crab.cpp.o -o plot_crab  -lyaml-cpp lib/libpolyscope.a -lpython3.11 lib/libglfw3.a -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl -lX11 lib/libglad.a lib/libimgui.a lib/libstb.a 

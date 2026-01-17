@@ -1,0 +1,55 @@
+# input output file path data
+io_files:
+  #input_obj: "../data/simplejoint_v4770.off"
+  #input_obj: "../data/bunny.off"
+  #input_obj: "../data/human_mesh.ply"
+  #input_obj: "../data/target_8.ply"
+
+  # the following ones can't work on the edge decimation part as it tries to collapse all edges
+  #input_obj: "../data/9HandleTorus.off"
+  #input_obj: "../data/crab_small.off"
+  # input_point_cloud: "../data/crab_small.off"
+  # input_mesh: "../data/fertilty.off"
+  # input_obj: "../data/fertilty.off"
+  #input_obj: "../data/bunny_less_noise.ply"
+  #input_obj: "../data/teddy_keypoints_poisson.ply"
+  #input_obj: "../data/bunny_keypoints.ply"
+  input_obj: "../data/dog.ply"
+  # input_obj: "/home/bronyale/code/pointCloudSkeletonization/dog_target.ply"
+  #input_obj: "../data/lambDenseKey.ply"
+  #input_obj: "../data/bunny_full_cloud.ply"
+  #input_obj: "../data/sparse.ply"
+  
+  #input_obj: "../data/horse_v1987.off"
+  #input_obj: "../data/indolady5_v11125.off"
+
+  output_obj: "../data/output.ply"
+
+general_params:
+  verbose: true                                   # enable / disable the output (true / false)
+  visualization: true                             # enable / disable the visualizations (true / false)
+  visualization_with_matplotlibcpp: false         # enable / disable additional visualizations (true / false)
+
+skeletonization:
+  # user parameters
+  skeleton_editing: 0                             # 1 for edge trimming, 2 for edge merging, 0 for none
+  use_radius: true
+  sample_radius: 0.002
+  sample_ratio: 20
+  # stopping criteria
+  iteration_time: 10
+  termination_criteria: 0.01
+  # algo parameters
+  k_for_knn: 15                                   # number of points used to build the one ring neighbourhoods
+  sl: 3.0                                         # initial values for laplacian
+  WC: 1.0                                         # initial values for weight
+  laplacian_threshold: 10000                      # to investigate (avoid diverging skeleton)
+  MAX_POSITION_CONSTRAINT_WEIGHT: 10000           # to investigate (avoid diverging skeleton)
+  MAX_LAPLACIAN_CONSTRAINT_WEIGHT: 2048           # to investigate (avoid diverging skeleton)
+
+visualization_params:
+  nodes_ratio: 50.0
+  edges_ratio: 200.0
+  graph_res: 30.0
+  nodes_color: [1.0, 0.1, 0.1]
+  edges_color: [0.1, 0.1, 0.1]

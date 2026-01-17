@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/libGraphCpp_bin.dir/app/main.cpp.o -o ../../bin/libGraphCpp_bin  ../../lib/libpolyscope.a -lyaml-cpp ../../lib/libglfw3.a -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl -lX11 ../../lib/libglad.a ../../lib/libimgui.a ../../lib/libstb.a 
